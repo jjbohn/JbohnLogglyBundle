@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="jbohn_loggly.monolog.http_handler.class">Jbohn\Bundle\LogglyBundle\Monolog\HttpHandler</parameter>
+        <parameter key="jbohn_loggly.monolog.format">json</parameter>
+    </parameters>
+
+    <services>
+        <service id="jbohn_loggly.monolog.http_handler" class="%jbohn_loggly.monolog.http_handler.class%">
+            <argument>%jbohn_loggly.input%</argument>
+            <argument>%jbohn_loggly.format%</argument>
+            <argument>%jbohn_loggly.secure%</argument>
+        </service>
+        <service id="monolog.handler.loggly" alias="jbohn_loggly.monolog.http_handler" />
+    </services>
+</container>
