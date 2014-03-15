@@ -1,3 +1,5 @@
-# Not ready for production
+# Abandoned
 
-Need to add docs and tests. Everything seems to be working fine but it's wip. Feel free to check it out, play, or put in a pr.
+I've abandoned this bundle. It was working fine at last check, but I'm not
+keeping up with it. Feel free to fork and update at will though. Would
+love if someone took this over.
